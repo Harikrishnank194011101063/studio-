@@ -1,3 +1,4 @@
+
 .App {
   text-align: center;
 }
@@ -35,4 +36,66 @@
   to {
     transform: rotate(360deg);
   }
+}
+.cards {
+  position: relative;
+  display: flex;
+  
+
+}
+body{
+background-image: url("https://images.unsplash.com/photo-1546708770-589dab7b22c7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cm9jayUyMG11c2ljfGVufDB8fDB8fA%3D%3D&w=1000&q=80.jpg") ;
+background-repeat: no-repeat;
+background-size: cover;
+
+
+}
+
+
+
+.h8name{
+
+transition: 0.8s;
+text-align: center;
+
+}
+
+.h8name:hover{
+  
+border: 1px;
+background-color: rgb(255, 4, 4,0.5);
+
+
+
+}
+
+
+
+
+h8{
+
+font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+span{
+padding-top: 20px;
+
+
+}
+.aboutdown{
+padding-top: 100px;
+padding-left: 600px;
+
+}
+td{
+
+
+
+}
+td:hover{
+
+
+
 }
