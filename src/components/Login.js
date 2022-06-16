@@ -22,7 +22,7 @@ function Login() {
     event.preventDefault();
     try {
       const { data } = await axios.post(
-        "http://localhost:4000/login",
+        "http://localhost:4101/login",
         {
           ...values,
         },
@@ -34,7 +34,7 @@ function Login() {
           if (email) generateError(email);
           else if (password) generateError(password);
         } else {
-          navigate("/");
+          navigate("/apply");
         }
       }
     } catch (ex) {
@@ -43,36 +43,41 @@ function Login() {
   };
   return (
     <div className="container">
-      <h2>Login to your Account</h2>
-      <form onSubmit={(e) => handleSubmit(e)}>
-        <div>
-          <label htmlFor="email">Email</label>
-          <input
-            type="email"
-            name="email"
-            placeholder="Email"
-            onChange={(e) =>
-              setValues({ ...values, [e.target.name]: e.target.value })
-            }
-          />
-        </div>
-        <div>
-          <label htmlFor="password">Password</label>
-          <input
-            type="password"
-            placeholder="Password"
-            name="password"
-            onChange={(e) =>
-              setValues({ ...values, [e.target.name]: e.target.value })
-            }
-          />
-        </div>
-        <button type="submit">Submit</button>
-        <span>
-          Don't have an account ?<Link to="/register"> Register </Link>
-        </span>
-      </form>
-      <ToastContainer />
+      <div className="fill">
+        <h2>Login to your Account</h2>
+        <form onSubmit={(e) => handleSubmit(e)}>
+          <div>
+            <label htmlFor="email">Email</label>
+            <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              onChange={(e) =>
+                setValues({ ...values, [e.target.name]: e.target.value })
+              }
+            />
+          </div>
+          <div>
+            <label htmlFor="password">Password</label>
+            <input
+              type="password"
+              placeholder="Password"
+              name="password"
+              onChange={(e) =>
+                setValues({ ...values, [e.target.name]: e.target.value })
+              }
+            />
+          </div>
+
+          <button type="submit">Submit</button>
+
+          <span>
+            Don't have an account ?<Link to="/register"> Register </Link>
+          </span>
+        </form>
+
+        <ToastContainer />
+      </div>
     </div>
   );
 }

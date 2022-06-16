@@ -26,7 +26,8 @@ function Topbar() {
     <Nav className="me-auto">
       <Nav.Link href="/frontpage">Home</Nav.Link>
       <Nav.Link href="/occupied">Occupied timing</Nav.Link>
-      <Nav.Link href="/apply">Apply</Nav.Link>
+      <Nav.Link href="/register">registeration</Nav.Link>
+      {/* <Nav.Link href="/register">register</Nav.Link> */}
 
 
 

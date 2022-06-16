@@ -8,6 +8,13 @@
   pointer-events: none;
 }
 
+ .fill{
+  pad: 20px;
+   border: 1px solid rgb(107, 47, 47);
+  
+   width: 400px;
+} 
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -57,7 +64,7 @@ background-size: cover;
 
 transition: 0.8s;
 text-align: center;
-
+font-family:Georgia, 'Times New Roman', Times, serif ;
 }
 
 .h8name:hover{
@@ -99,3 +106,43 @@ td:hover{
 
 
 }
+.form{
+width: 500px;
+
+}
+h4{
+  
+}
+.regi{
+
+  pad: 20px;
+  border: 1px solid rgb(59, 22, 22);
+  
+  width: 400px;
+
+}
+h1{
+
+  transition: 0.8s;
+  text-align: center;
+  font-family:Georgia, 'Times New Roman', Times, serif ;
+   color: aliceblue;
+  
+}
+
+h1:hover{
+  
+  border: 1px;
+  background-color: rgba(252, 0, 0, 0.733);
+  
+  
+  
+  }
+  button{
+
+    border-radius: 10px;
+
+
+  }
+  
+  

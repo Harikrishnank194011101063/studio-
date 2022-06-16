@@ -7,9 +7,9 @@ function Register() {
   const [cookies] = useCookies(["cookie-name"]);
   const navigate = useNavigate();
   useEffect(() => {
-    if (cookies.jwt) {
-      navigate("/");
-    }
+    // if (cookies.jwt) {
+    //   navigate("/");
+    // }
   }, [cookies, navigate]);
 
   const [values, setValues] = useState({ email: "", password: "" });
@@ -21,7 +21,7 @@ function Register() {
     event.preventDefault();
     try {
       const { data } = await axios.post(
-        "http://localhost:4000/register",
+        "http://localhost:4101/register",
         {
           ...values,
         },
@@ -32,8 +32,9 @@ function Register() {
           const { email, password } = data.errors;
           if (email) generateError(email);
           else if (password) generateError(password);
+          navigate("/");//error
         } else {
-          navigate("/");
+        navigate() //success
         }
       }
     } catch (ex) {
@@ -42,6 +43,7 @@ function Register() {
   };
   return (
     <div className="container">
+    <div className="regi">
       <h2>Register Account</h2>
       <form onSubmit={(e) => handleSubmit(e)}>
         <div>
@@ -63,15 +65,20 @@ function Register() {
             name="password"
             onChange={(e) =>
               setValues({ ...values, [e.target.name]: e.target.value })
+           
             }
           />
+        
         </div>
+        
         <button type="submit">Submit</button>
         <span>
           Already have an account ?<Link to="/login"> Login</Link>
         </span>
       </form>
       <ToastContainer />
+    
+    </div>
     </div>
   );
 }
